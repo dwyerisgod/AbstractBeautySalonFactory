@@ -1,4 +1,5 @@
 #include <iostream>
+using namespace std;
 
 // Абстрактный класс для стрижки
 class Haircut {
