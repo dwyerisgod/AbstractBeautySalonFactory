@@ -1,5 +1,4 @@
 #include <iostream>
-using namespace std;
 
 // Абстрактный класс для стрижки
 class Haircut {
@@ -79,7 +78,7 @@ public:
 class LuxuryHaircut : public Haircut {
 public:
     void cutHair() override {
-        cout << "Делаем роскошную стрижку" << endl;
+        std::cout << "Делаем роскошную стрижку" << std::endl;
     }
 };
 
