@@ -1,6 +1,15 @@
 #include <iostream>
 using namespace std;
 
+// Абстрактна фабрика
+class BeautySalonFactory {
+public:
+    virtual ~BeautySalonFactory() {}
+    virtual Haircut* createHaircutService() = 0;
+    virtual Manicure* createManicureService() = 0;
+    virtual Pedicure* createPedicureService() = 0;
+};
+
 // Абстрактні класи для послуг
 class Haircut {
 public:
@@ -40,15 +49,6 @@ public:
     void doPedicure() override {
         cout << "Робимо розкішний педикюр" << endl;
     }
-};
-
-// Абстрактна фабрика
-class BeautySalonFactory {
-public:
-    virtual ~BeautySalonFactory() {}
-    virtual Haircut* createHaircutService() = 0;
-    virtual Manicure* createManicureService() = 0;
-    virtual Pedicure* createPedicureService() = 0;
 };
 
 // Конкретна фабрика для салону краси "Luxury Beauty"
@@ -127,7 +127,7 @@ public:
     }
 };
 
-// Конкретні класи для послуги салону "Premium Beauty"
+// Абстрактний клас фабрики для салону краси "Premium Beauty"
 class PremiumBeautyFactory : public BeautySalonFactory {
 public:
     Haircut* createHaircutService() override {
