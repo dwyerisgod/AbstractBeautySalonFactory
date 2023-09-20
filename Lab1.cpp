@@ -144,7 +144,9 @@ public:
 };
 
 int main() {
-    string salonType = "luxury"; // або "economy" або "premium"
+    string salonType; 
+    cout << "Введіть назву фабрики (economy, luxury, premium) - ";
+    cin >> salonType;
     BeautySalonFactory* salonFactory = nullptr;
 
     if (salonType == "luxury") {
