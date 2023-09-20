@@ -171,10 +171,5 @@ int main() {
     delete pedicureService;
     delete salonFactory;
 
-    int a = 0;
-
-    cout << "Enter value of a -" << endl;
-    cin >> a;
-
     return 0;
 }
